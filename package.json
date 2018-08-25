@@ -1,0 +1,22 @@
+{
+  "name": "to-camel",
+  "version": "1.0.0",
+  "description": "Converts objects' keys to their camelCase version.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfanty/toCamel.git"
+  },
+  "keywords": [
+    "toCamel"
+  ],
+  "author": "Lisichka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfanty/toCamel/issues"
+  },
+  "homepage": "https://github.com/sfanty/toCamel#readme"
+}
