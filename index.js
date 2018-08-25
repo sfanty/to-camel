@@ -40,3 +40,5 @@ function dealWithSpecials(specialC, key) {
 
     return key;
 }
+
+module.exports.toCamel = toCamel;
