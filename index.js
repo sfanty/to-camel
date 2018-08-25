@@ -31,7 +31,7 @@ function toCamel(o) {
 
 
 function dealWithSpecials(specialC, key) {
-    let si = key.indexOf(specialC); // doesn't work well if underscore is in index 1
+    let si = key.indexOf(specialC);
     while (si > -1) {
         key = key.slice(0, si) + key.slice(si + 1, si + 2).toUpperCase() + key.slice(si + 2);
 
