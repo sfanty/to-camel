@@ -1,4 +1,18 @@
-function toCamel(o) {
+module.exports = function toCamel(o) {
+
+    function dealWithSpecials(specialC, key) {
+        let si = key.indexOf(specialC);
+        while (si > -1) {
+            key = key.slice(0, si) + key.slice(si + 1, si + 2).toUpperCase() + key.slice(si + 2);
+
+            si = key.indexOf(specialC); // check for multiple field name (such_as_this);
+        }
+
+        return key;
+    }
+
+
+
     var newO, origKey, newKey, value
     if (o instanceof Array) {
         return o.map(value => {
@@ -28,17 +42,3 @@ function toCamel(o) {
     }
     return newO
 };
-
-
-function dealWithSpecials(specialC, key) {
-    let si = key.indexOf(specialC);
-    while (si > -1) {
-        key = key.slice(0, si) + key.slice(si + 1, si + 2).toUpperCase() + key.slice(si + 2);
-
-        si = key.indexOf(specialC); // check for multiple field name (such_as_this);
-    }
-
-    return key;
-}
-
-module.exports.toCamel = toCamel;
